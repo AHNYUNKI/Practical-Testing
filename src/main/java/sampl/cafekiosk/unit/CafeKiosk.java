@@ -1,7 +1,7 @@
 package sampl.cafekiosk.unit;
 
 import lombok.Getter;
-import sampl.cafekiosk.order.Order;
+import sampl.cafekiosk.unit.order.Order;
 import sampl.cafekiosk.unit.beverage.Beverage;
 
 import java.time.LocalDateTime;

@@ -1,4 +1,4 @@
-package sampl.cafekiosk.order;
+package sampl.cafekiosk.unit.order;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

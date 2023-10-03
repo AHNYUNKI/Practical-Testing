@@ -1,6 +1,6 @@
 package sampl.cafekiosk.unit;
 
-import sampl.cafekiosk.order.Order;
+import sampl.cafekiosk.unit.order.Order;
 import sampl.cafekiosk.unit.beverage.Americano;
 import sampl.cafekiosk.unit.beverage.Latte;
 
