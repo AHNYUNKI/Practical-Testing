@@ -22,14 +22,14 @@ public class OrderResponse {
     private int totalPrice;
     private LocalDateTime registeredDateTime;
 
-    private List<ProductResponse> product;
+    private List<ProductResponse> products;
 
     @Builder
-    private OrderResponse(Long id, int totalPrice, LocalDateTime registeredDateTime, List<ProductResponse> product) {
+    private OrderResponse(Long id, int totalPrice, LocalDateTime registeredDateTime, List<ProductResponse> products) {
         this.id = id;
         this.totalPrice = totalPrice;
         this.registeredDateTime = registeredDateTime;
-        this.product = product;
+        this.products = products;
     }
 
     public static OrderResponse of(Order order) {
@@ -37,7 +37,7 @@ public class OrderResponse {
                 .id(order.getId())
                 .totalPrice(order.getTotalPrice())
                 .registeredDateTime(order.getRegisteredDateTime())
-                .product(order.getOrderProducts().stream()
+                .products(order.getOrderProducts().stream()
                         .map(orderProduct -> ProductResponse.of(orderProduct.getProduct()))
                         .collect(Collectors.toList())
                 )
