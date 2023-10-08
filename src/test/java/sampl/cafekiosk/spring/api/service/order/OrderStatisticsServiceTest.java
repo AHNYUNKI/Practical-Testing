@@ -75,6 +75,7 @@ class OrderStatisticsServiceTest {
         Order order3 = createPaymentCompletedOrder(LocalDateTime.of(2023, 3, 5, 23, 59, 59), products);
         Order order4 = createPaymentCompletedOrder(LocalDateTime.of(2023, 3, 6, 0, 0), products);
 
+        // stubbing
         when(mailSendClient.sendEmail(any(String.class), any(String.class), any(String.class), any(String.class)))
                 .thenReturn(true);
 
