@@ -4,6 +4,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.transaction.annotation.Transactional;
+import sampl.cafekiosk.spring.IntegrationTestSupport;
 import sampl.cafekiosk.spring.domain.product.Product;
 
 import java.util.List;
@@ -14,8 +16,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static sampl.cafekiosk.spring.domain.product.ProductSellingStatus.*;
 import static sampl.cafekiosk.spring.domain.product.ProductType.HANDMADE;
 
-@DataJpaTest
-class StockRepositoryTest {
+@Transactional
+class StockRepositoryTest extends IntegrationTestSupport {
 
     @Autowired
     private StockRepository stockRepository;
